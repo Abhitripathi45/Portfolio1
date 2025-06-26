@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" />
+  	<link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap"
+  	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<style>
+html, body {
+  height: 100%;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.main-layout {
+  min-height: 100vh;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  line-height: normal;
+  height: 100vh;
+  width: 100vw;
+ 
+}
+
+.center-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.337);
+  border-radius: 32px;
+  width: 40%;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  margin: 16px auto;
+}
+
+.center-navbar button {
+  padding: 8px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 16px;
+  background: transparent;
+  font-family: Poppins, sans-serif;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #ffffff;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: #000000FF;
+  box-shadow: 0px 15px 20px rgba(27, 24, 24, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.container {
+      display: flex;
+      height: 82%;
+      width: 96%;
+      background-color: #111;
+      margin: 0 auto;
+      color: white;
+      border-radius: 32px;
+      backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Sidebar and Content Styles */
+    .container {
+      display: flex;
+    }
+.sidebar {
+  flex: 0 0 300px;
+  width: 300px;
+  background-color: #000000FF;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* horizontally center the buttons */
+  justify-content: center; /* vertically center the buttons */
+  border-radius: 32px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0; /* remove extra padding */
+}
+.sidebar button i {
+  margin-right: 4px;
+  font-size: 32px;
+}
+.sidebar button {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 0 10px 8px; /* add margin between buttons */
+  transition: background 0.2s, color 0.2s;
+  border-radius: 0;
+  gap:12px;
+}
+.sidebar button:hover {
+  background-color: #FFFFFFAB;
+  color: black;
+  transform: translateY(-3px);
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+.sidebar button.active {
+  background-color: #fff;
+  color: #000;
+  border-right: 6px solid #E6521F;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;           /* Increased height */
+  max-height: 100%;
+ 
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  background: #222;
+  min-height: 420px;       /* Increased min-height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-img {
+  height: 550px;           /* Make images fit the new carousel height */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: none;
+}
+.carousel-img.active {
+  display: block;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 2em;
+  padding: 0 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  user-select: none;
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+    .content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+.mini-carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.mini-carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 16px;
+}
+
+.mini-carousel-img.active {
+  opacity: 1;
+  z-index: 2;
+}
+/* Tablet Devices */
+@media (max-width: 1024px) {
+
+
+  .center-navbar {
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
+@media (max-width: 768px) {
+  .center-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    border-radius: 0;
+    justify-content: center;
+    flex-direction: row; /* keep it horizontal */
+    gap: 8px;
+    padding: 8px 12px;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+  }
+
+  .center-navbar button {
+    padding: 6px 10px;
+    font-size: 0.8em;
+    font-weight: 600;
+    border-radius: 12px;
+  }
+  @media screen and (max-width: 768px) {
+  .sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .sidebar button {
+    min-width: 150px;
+    white-space: nowrap;
+    margin: 8px;
+  }
+}
+</style>
+<body>
+<nav class="center-navbar">
+  <button onclick="location.href='index.html'">Home</button>
+  <button onclick="location.href='projects.html'">Projects</button>
+  <button onclick="location.href='Aboutme.html'">About</button>
+  <button onclick="location.href='contact.html'">Contact</button>
+</nav>
+<div class="container">
+<div class="sidebar">
+  <button class="active" onclick="showSection('Deepfake Detection', this)">
+    <i class="fas fa-brain"></i> Deepfake Detection
+  </button>
+  <button onclick="showSection('Figma', this)">
+    <i class="fab fa-figma"></i> UI/UX
+  </button>
+  <button onclick="showSection('Authentication', this)">
+    <i class="fas fa-lock"></i> Authentication
+  </button>
+</div>
+  <div class="content">
+    <div id="Deepfake Detection" class="section active">
+     <div class="carousel">
+  <video class="carousel-img" controls autoplay loop muted playsinline>
+    <source src="DEEPFAKE (1).mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <video class="carousel-img" controls autoplay loop muted playsinline>
+    <source src="deep.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+  <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+    </div>
+    <div id="Figma" class="section">
+  <div class="card-container">
+    
+    <div class="card">
+      <video src="mobi.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+    <div class="card">
+      <video src="app.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+    <div class="card">
+      <video src="zom.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 8px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1;
+    max-width: 350px;
+    min-width: 250px;
+    height: 34rem;
+    background-color: #f3f3f3;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0; /* remove padding to make video fill */
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+  }
+
+  .card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
+</style>
+    <div id="Authentication" class="section">
+  <div class="auth-wrapper">
+    
+    <!-- ✅ Left Card with Video -->
+    <div class="auth-card">
+      <video src="Au.mp4" autoplay muted loop playsinline controls style="width:100%; height:100%; object-fit:cover; border-radius:16px;"></video>
+    </div>
+
+    <!-- ✅ Right Card with PDF -->
+    <div class="auth-card pdf-card">
+      <div class="pdf-container">
+        <embed src="Internship-Report-sample-6.pdf" type="application/pdf" />
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+<style>
+  .auth-wrapper {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .auth-card {
+    flex: 1;
+    min-width: 300px;
+    height:510px;
+    max-width: calc(50% - 12px); /* 24px gap split evenly */
+    background-color: #000000FF;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  }
+  .auth-card:hover{
+   transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .pdf-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pdf-container {
+    flex: 1;
+    height: 510px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .pdf-container embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    .auth-card {
+      max-width: 100%;
+    }
+
+    .pdf-container {
+      height: 300px;
+    }
+  }
+</style>
+  </div>
+</div>
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel-img');
+function showSlide(n) {
+  slides.forEach((img, i) => img.classList.toggle('active', i === n));
+}
+function changeSlide(dir) {
+  currentSlide = (currentSlide + dir + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+showSlide(currentSlide);
+</script>
+<script>
+function showSection(sectionId, btn) {
+  // Hide all sections
+  document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+  // Show the selected section
+  const target = document.getElementById(sectionId);
+  if (target) target.classList.add('active');
+
+  // Remove active from all sidebar buttons
+  document.querySelectorAll('.sidebar button').forEach(b => b.classList.remove('active'));
+  // Add active to the clicked button
+  if (btn) btn.classList.add('active');
+}
+</script>
+<body style="margin:0; padding:0; overflow:hidden;">
+  <div id="vanta-bg" style="position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:-2;"></div>
+  <div style="position:relative; z-index:-1;">
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+<script>
+VANTA.FOG({
+  el: "#vanta-bg",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00
+})
+</script>
+</body>
+</html>
