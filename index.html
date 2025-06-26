@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet"  href="style.css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" />
+  	<link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap"
+  	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  	
+</head>
+<body>
+<nav class="center-navbar">
+  <button onclick="location.href='index.html'">Home</button>
+  <button onclick="location.href='projects.html'">Projects</button>
+  <button onclick="location.href='Aboutme.html'">About</button>
+  <button onclick="location.href='contact.html'">Contact</button>
+</nav>
+<div class="card-container">
+  <div class="left">
+  <img src="dp.png" alt="Profile" class="left-card-img">
+   <p class="left-card-text"><strong>Abhishek Kumar Tripathi</strong></p>
+    <p class="tagline">Engineer turned Developer. Passionate about frontend & creative design. Always learning.</p>
+
+</div>
+</div>
+
+  <div class="right">
+  <div class="description">
+  <p>
+    I’m <strong>Abhishek Kumar Tripathi</strong>, a creative frontend developer and designer from 
+    <strong>Babasaheb Bhimrao Ambedkar University</strong> — a prestigious <strong>Central Government University</strong> in Lucknow.
+  </p>
+  <p>
+    I specialize in building visually appealing, responsive, and user-friendly websites. My passion lies in combining design with clean, modern code to deliver smooth digital experiences.
+  </p>
+  <p>
+    I’m self-driven, constantly learning, and love turning ideas into reality through web technologies. I believe in creating purposeful design that speaks and performs.
+  </p>
+</div>
+
+  </div>
+  <div class="right1">
+    <p>"From Wireframes to Workflows – I Build With Purpose."</p>
+  </div>
+  <div class="right2">
+  <video src="ui.mp4" autoplay loop muted playsinline 
+    style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0; border-radius:inherit;"></video>
+  <div style="position:relative; z-index:1; width:100%; text-align:center; color:#fff; padding:24px;">
+</div>
+  </div>
+</div>
+<body style="margin:0; padding:0; overflow:hidden;">
+  <div id="vanta-bg" style="position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:-2;"></div>
+  <div style="position:relative; z-index:-1;">
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+<script>
+VANTA.FOG({
+  el: "#vanta-bg",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00
+})
+</script>
+
+</body>
+</html>
